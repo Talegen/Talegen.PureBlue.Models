@@ -1,0 +1,1028 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Talegen.PureBlue.Models</name>
+    </assembly>
+    <members>
+        <member name="T:Talegen.PureBlue.Models.ChannelBestPractice">
+            <summary>
+            This class represents best practices for a given channel and is used within the channel definition.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelBestPractice.MinMessageLegnth">
+            <summary>
+            Gets or sets the minimum message legnth.
+            </summary>
+            <value>The message legnth.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelBestPractice.MaxMessageLegnth">
+            <summary>
+            Gets or sets the maximum message legnth.
+            </summary>
+            <value>The message legnth.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelBestPractice.MaxPostsPerDay">
+            <summary>
+            Gets or sets the maximum posts per day.
+            </summary>
+            <value>The maximum posts per day.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelBestPractice.MinTags">
+            <summary>
+            Gets or sets the minimum tags.
+            </summary>
+            <value>The minimum tags.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelBestPractice.MaxTags">
+            <summary>
+            Gets or sets the maximum tags.
+            </summary>
+            <value>The maximum tags.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelBestPractice.MinEmojiCount">
+            <summary>
+            Gets or sets the minimum emoji count.
+            </summary>
+            <value>The emoji count.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelBestPractice.MaxEmojiCount">
+            <summary>
+            Gets or sets the maximum emoji count.
+            </summary>
+            <value>The emoji count.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelBestPractice.IncludeLink">
+            <summary>
+            Gets or sets a value indicating whether [include link].
+            </summary>
+            <value><c>true</c> if [include link]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelBestPractice.IncludeMedia">
+            <summary>
+            Gets or sets a value indicating whether [include media].
+            </summary>
+            <value><c>true</c> if [include media]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelBestPractice.MediaDimensions">
+            <summary>
+            Gets or sets the media dimensions.
+            </summary>
+            <value>The media dimensions.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelBestPractice.PostDateTimes">
+            <summary>
+            Gets or sets the post date times.
+            </summary>
+            <value>The post date times.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.ChannelException">
+            <summary>
+            This class represents a base channel exception.
+            </summary>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="M:Talegen.PureBlue.Models.ChannelException.#ctor(System.String,System.Exception,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.PureBlue.Models.ChannelException" /> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="ex">The ex.</param>
+            <param name="errorType">Type of the error.</param>
+            <param name="errorCode">The error code.</param>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.ChannelException.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.PureBlue.Models.ChannelException" /> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="errorType">Type of the error.</param>
+            <param name="errorCode">The error code.</param>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelException.ErrorType">
+            <summary>
+            Gets or sets the type of the error.
+            </summary>
+            <value>The type of the error.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelException.ErrorCode">
+            <summary>
+            Gets or sets the code of the error.
+            </summary>
+            <value>The code of the error.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.ChannelProperties">
+            <summary>
+            This class contains properties related to the channel.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelProperties.MaxLength">
+            <summary>
+            Gets or sets the maximum length of the message.
+            </summary>
+            <value>The maximum length of the message.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.ChannelProperties.MaxPerDay">
+            <summary>
+            Gets or sets the maximum posts per day.
+            </summary>
+            <value>The maximum posts per day.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel">
+            <summary>
+            This class implements the channel interface class to support a facebook page channel.
+            </summary>
+            <seealso cref="T:Talegen.PureBlue.Models.IChannel" />
+        </member>
+        <member name="F:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel.disposedValue">
+            <summary>
+            The disposed value
+            </summary>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel" /> class.
+            </summary>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel.#ctor(System.Guid,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+            <param name="description">The description.</param>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel.TenantId">
+            <summary>
+            Gets or sets the tenant identifier.
+            </summary>
+            <value>The tenant identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel.Type">
+            <summary>
+            Gets or sets the channel type.
+            </summary>
+            <value>The channel type.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel.Properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+            <value>The properties.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel.BestPractice">
+            <summary>
+            Gets or sets the best practice.
+            </summary>
+            <value>The best practice.</value>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannel.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannelException">
+            <summary>
+            This class implements a channel exception for Facebook Page Channel Errors.
+            </summary>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannelException.#ctor(System.String,System.Exception,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannelException" /> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="ex">The ex.</param>
+            <param name="errorType">Type of the error.</param>
+            <param name="errorCode">The error code.</param>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannelException.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannelException" /> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="errorType">Type of the error.</param>
+            <param name="errorCode">The error code.</param>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannelException.ErrorSubcode">
+            <summary>
+            Gets or sets the error subcode.
+            </summary>
+            <value>The code of the error subcode.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannelException.ErrorUserTitle">
+            <summary>
+            Gets or sets the error user title.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.FacebookPageChannelException.ErrorUserMessage">
+            <summary>
+            Gets or sets the error user message.
+            </summary>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel">
+            <summary>
+            This class implements the channel interface class to support a Twitter channel.
+            </summary>
+            <seealso cref="T:Talegen.PureBlue.Models.IChannel" />
+        </member>
+        <member name="F:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel.disposedValue">
+            <summary>
+            The disposed value
+            </summary>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel" /> class.
+            </summary>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel.#ctor(System.Guid,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+            <param name="description">The description.</param>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel.TenantId">
+            <summary>
+            Gets or sets the tenant identifier.
+            </summary>
+            <value>The tenant identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel.Type">
+            <summary>
+            Gets or sets the channel type.
+            </summary>
+            <value>The channel type.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel.Properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+            <value>The properties.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel.BestPractice">
+            <summary>
+            Gets or sets the best practice.
+            </summary>
+            <value>The best practice.</value>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Channels.Facebook.TwitterChannel.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Channels.Twitter.TwitterChannelException">
+            <summary>
+            This class implements a twitter channel exception.
+            </summary>
+            <seealso cref="T:Talegen.PureBlue.Models.ChannelException" />
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Channels.Twitter.TwitterChannelException.#ctor(System.String,System.Exception,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.PureBlue.Models.Channels.Twitter.TwitterChannelException" /> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="ex">The ex.</param>
+            <param name="errorType">Type of the error.</param>
+            <param name="errorCode">The error code.</param>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Channels.Twitter.TwitterChannelException.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.PureBlue.Models.Channels.Twitter.TwitterChannelException" /> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="errorType">Type of the error.</param>
+            <param name="errorCode">The error code.</param>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Content.ContentCategory">
+            <summary>
+            This class represents a content category
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentCategory.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentCategory.TenantId">
+            <summary>
+            Gets or sets the tenant identifier.
+            </summary>
+            <value>The tenant identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentCategory.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentCategory.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentCategory.Color">
+            <summary>
+            Gets or sets the color.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentCategory.Icon">
+            <summary>
+            Gets or sets the icon.
+            </summary>
+            <value>The icon.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentCategory.DefaultContentTags">
+            <summary>
+            Gets or sets the default content tags.
+            </summary>
+            <value>The default content tags.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Content.ContentItem">
+            <summary>
+            This class represents a content item within the tenant
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentItem.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentItem.TenantId">
+            <summary>
+            Gets or sets the tenant identifier.
+            </summary>
+            <value>The tenant identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentItem.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentItem.Url">
+            <summary>
+            Gets or sets the URL.
+            </summary>
+            <value>The URL.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentItem.Channel">
+            <summary>
+            Gets or sets the channel.
+            </summary>
+            <value>The channel.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentItem.MediaItems">
+            <summary>
+            Gets or sets a list of related media items.
+            </summary>
+            <value>The media items.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentItem.Tags">
+            <summary>
+            Gets or sets the tags.
+            </summary>
+            <value>The tags.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentItem.Personas">
+            <summary>
+            Gets or sets a list of related personas.
+            </summary>
+            <value>The personas.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentItem.Template">
+            <summary>
+            Gets or sets the template.
+            </summary>
+            <value>The template.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Content.ContentTag">
+            <summary>
+            This class represents a hash tag associated with a specific channel and used with tags specific to a channel.
+            </summary>
+            <seealso cref="T:Talegen.PureBlue.Models.Content.Tag" />
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentTag.ChannelType">
+            <summary>
+            Gets or sets the type of the channel.
+            </summary>
+            <value>The type of the channel.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Content.ContentTemplate">
+            <summary>
+            This class represents a content template within the application
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentTemplate.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentTemplate.TenantId">
+            <summary>
+            Gets or sets the tenant identifier.
+            </summary>
+            <value>The tenant identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentTemplate.ChannelTypes">
+            <summary>
+            Gets or sets the channel types.
+            </summary>
+            <value>The channel types.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentTemplate.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentTemplate.Content">
+            <summary>
+            Gets or sets the template content.
+            </summary>
+            <value>The content.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Content.ContentType">
+            <summary>
+            This class represents a content type.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentType.Id">
+            <summary>
+            Gets or sets the identifier of the type.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentType.TenantId">
+            <summary>
+            Gets or sets the tenant identifier.
+            </summary>
+            <value>The tenant identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentType.Title">
+            <summary>
+            Gets or sets the title of the type.
+            </summary>
+            <value>The title of the type.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.ContentType.Color">
+            <summary>
+            Gets or sets the color code of the type.
+            </summary>
+            <value>The color in hexedecimal web format RRGGBB.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Content.MediaItem">
+            <summary>
+            This class represents a media item.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.MediaItem.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.MediaItem.TenantId">
+            <summary>
+            Gets or sets the tenant identifier.
+            </summary>
+            <value>The tenant identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.MediaItem.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.MediaItem.FileName">
+            <summary>
+            Gets or sets the name of the file.
+            </summary>
+            <value>The name of the file.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.MediaItem.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.MediaItem.AlternateText">
+            <summary>
+            Gets or sets the alternate text.
+            </summary>
+            <value>The alternate text.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.MediaItem.Url">
+            <summary>
+            Gets or sets the URL.
+            </summary>
+            <value>The URL.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Content.Tag">
+            <summary>
+            This class represents a tag
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.Tag.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.Tag.TenantId">
+            <summary>
+            Gets or sets the tenant identifier.
+            </summary>
+            <value>The tenant identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Content.Tag.Name">
+            <summary>
+            Gets or sets the tag.
+            </summary>
+            <value>The tag.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.ChannelType">
+            <summary>
+            Contains an enumerated list of available channel types.
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.ChannelType.FacebookGroup">
+            <summary>
+            A Facebook group channel
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.ChannelType.FacebookPage">
+            <summary>
+            A Facebook page channel
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.ChannelType.Instagram">
+            <summary>
+            An instagram channel
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.ChannelType.Line">
+            <summary>
+            Line Channel
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.ChannelType.LinkedIn">
+            <summary>
+            LinkedIn Channel
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.ChannelType.Pinterest">
+            <summary>
+            Pinterest Channel
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.ChannelType.Tumblr">
+            <summary>
+            Tumblr Channel
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.ChannelType.Twitter">
+            <summary>
+            Twitter Channel
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.ChannelType.Reddit">
+            <summary>
+            Reddit Channel
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.ChannelType.Snapchat">
+            <summary>
+            Snapchat Channel
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.ChannelType.YouTube">
+            <summary>
+            YouTube Channel
+            </summary>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.IChannel">
+            <summary>
+            This class represents a minimal implementation of a channel.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.IChannel.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.IChannel.TenantId">
+            <summary>
+            Gets or sets the tenant identifier.
+            </summary>
+            <value>The tenant identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.IChannel.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.IChannel.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.IChannel.Type">
+            <summary>
+            Gets or sets the channel type.
+            </summary>
+            <value>The channel type.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.IChannel.Properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+            <value>The properties.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.IChannel.BestPractice">
+            <summary>
+            Gets or sets the best practice.
+            </summary>
+            <value>The best practice.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Marketing.Campaign">
+            <summary>
+            This class represents a content campaign for the tenant.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Campaign.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Campaign.TenantId">
+            <summary>
+            Gets or sets the tenant identifier.
+            </summary>
+            <value>The tenant identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Campaign.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Campaign.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Campaign.ContentType">
+            <summary>
+            Gets or sets the type of the content.
+            </summary>
+            <value>The type of the content.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Campaign.Url">
+            <summary>
+            Gets or sets the URL for the campaign.
+            </summary>
+            <value>The URL.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Campaign.ContentItems">
+            <summary>
+            Gets or sets the content items.
+            </summary>
+            <value>The content items.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Campaign.MediaItems">
+            <summary>
+            Gets or sets the media items.
+            </summary>
+            <value>The media items.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Campaign.ContentTags">
+            <summary>
+            Gets or sets the content tags.
+            </summary>
+            <value>The content tags.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Campaign.Personas">
+            <summary>
+            Gets or sets a list of related personas.
+            </summary>
+            <value>The personas.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Campaign.Templates">
+            <summary>
+            Gets or sets the templates.
+            </summary>
+            <value>The templates.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Marketing.Defaults">
+            <summary>
+            This class contains helper functions for creating default lists.
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.Marketing.Defaults.ColorRed">
+            <summary>
+            The color red
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.Marketing.Defaults.ColorGreen">
+            <summary>
+            The color green
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.Marketing.Defaults.ColorBlue">
+            <summary>
+            The color blue
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.Marketing.Defaults.ColorPurple">
+            <summary>
+            The color purple
+            </summary>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Marketing.Defaults.ContentCategories(System.Guid)">
+            <summary>
+            Contents the categories.
+            </summary>
+            <param name="tenantId">The tenant identifier.</param>
+            <returns>Returns a list of <see cref="T:Talegen.PureBlue.Models.Content.ContentCategory" /> objects.</returns>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Marketing.Defaults.ContentTypes(System.Guid)">
+            <summary>
+            Contents the types.
+            </summary>
+            <param name="tenantId">The tenant identifier.</param>
+            <returns>Returns a list of <see cref="T:Talegen.PureBlue.Models.Content.ContentType" /> objects.</returns>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Marketing.Persona">
+            <summary>
+            This class represents a persona within a tenant and campaign
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Persona.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Persona.TenantId">
+            <summary>
+            Gets or sets the tenant identifier.
+            </summary>
+            <value>The tenant identifier.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Persona.Name">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Persona.Properties">
+            <summary>
+            Gets or sets the properties of the persona.
+            </summary>
+            <value>The properties.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.Persona.InfoSources">
+            <summary>
+            Gets or sets the information sources.
+            </summary>
+            <value>The information sources.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Marketing.PersonaInfoSource">
+            <summary>
+            Contains a set of person information sources for a given persona
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.PersonaInfoSource.Conferences">
+            <summary>
+            Gets or sets the information sources.
+            </summary>
+            <value>The information sources.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.PersonaInfoSource.Blogs">
+            <summary>
+            Gets or sets the blogs.
+            </summary>
+            <value>The blogs.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.PersonaInfoSource.Experts">
+            <summary>
+            Gets or sets the experts.
+            </summary>
+            <value>The experts.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.PersonaInfoSource.Magazines">
+            <summary>
+            Gets or sets the magazines.
+            </summary>
+            <value>The magazines.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Marketing.PersonaInfoSource.Websites">
+            <summary>
+            Gets or sets the websites.
+            </summary>
+            <value>The websites.</value>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Properties.Resources.BusinessText">
+            <summary>
+              Looks up a localized string similar to Business.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Properties.Resources.CuratedText">
+            <summary>
+              Looks up a localized string similar to Curated.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Properties.Resources.EngagementText">
+            <summary>
+              Looks up a localized string similar to Engagement.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Properties.Resources.FoodText">
+            <summary>
+              Looks up a localized string similar to Food.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Properties.Resources.InspirationText">
+            <summary>
+              Looks up a localized string similar to Inspiration.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Properties.Resources.OriginalText">
+            <summary>
+              Looks up a localized string similar to Original.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Properties.Resources.ProductsText">
+            <summary>
+              Looks up a localized string similar to Products.
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Properties.Resources.PromotionalText">
+            <summary>
+              Looks up a localized string similar to Promotional.
+            </summary>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Types.BestPostDayTime">
+            <summary>
+            This class represents a best practice time to post for a channel.
+            </summary>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.Types.BestPostDayTime.AllDays">
+            <summary>
+            All days
+            </summary>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Types.BestPostDayTime.DayOfWeek">
+            <summary>
+            Gets or sets the day of week.
+            </summary>
+            <value>The day of week.</value>
+        </member>
+        <member name="F:Talegen.PureBlue.Models.Types.BestPostDayTime.TimeRanges">
+            <summary>
+            The time ranges
+            </summary>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Types.DateTimeRange">
+            <summary>
+            This class represents a date range of a start date time and end date time.
+            </summary>
+            <seealso cref="T:Talegen.PureBlue.Models.Types.IRange`1" />
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Types.DateTimeRange.Start">
+            <summary>
+            Gets the start.
+            </summary>
+            <value>The start.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Types.DateTimeRange.End">
+            <summary>
+            Gets the end.
+            </summary>
+            <value>The end.</value>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Types.DateTimeRange.Includes(System.DateTime)">
+            <summary>
+            Includeses the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Types.DateTimeRange.Includes(Talegen.PureBlue.Models.Types.IRange{System.DateTime})">
+            <summary>
+            Includeses the specified range.
+            </summary>
+            <param name="range">The range.</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Talegen.PureBlue.Models.Types.IRange`1">
+            <summary>
+            This interface class is used to implement a range class.
+            </summary>
+            <typeparam name="T">Contains the type of data for the range.</typeparam>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Types.IRange`1.Start">
+            <summary>
+            Gets the start.
+            </summary>
+            <value>The start.</value>
+        </member>
+        <member name="P:Talegen.PureBlue.Models.Types.IRange`1.End">
+            <summary>
+            Gets the end.
+            </summary>
+            <value>The end.</value>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Types.IRange`1.Includes(`0)">
+            <summary>
+            Includeses the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Talegen.PureBlue.Models.Types.IRange`1.Includes(Talegen.PureBlue.Models.Types.IRange{`0})">
+            <summary>
+            Includeses the specified range.
+            </summary>
+            <param name="range">The range.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
